@@ -12,10 +12,14 @@ import org.nd4j.linalg.api.ndarray.INDArray;
 public class Perceptron {
     private INDArray weights;
     private Double bias;
+    private Double output;
     
     private ActivationFunction activationFunction;
     
-    public static void main(String[] args) {
-
+    public Double calculateOutput(INDArray input) {
+        INDArray dotProduct = input.mul(weights);
+        Double sumDotProduct = dotProduct.sum().getDouble();
+        this.output = this.activationFunction.activate(sumDotProduct + bias);
+        return this.output;
     }
 }
