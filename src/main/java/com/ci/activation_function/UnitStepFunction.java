@@ -10,4 +10,9 @@ public class UnitStepFunction implements ActivationFunction{
     public Double activateDiff(Double b) {
         return 0.0;
     }
+    
+    @Override
+    public String toString() {
+        return "Unit Step Function";
+    }
 }

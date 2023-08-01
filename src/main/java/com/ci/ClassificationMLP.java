@@ -17,7 +17,7 @@ import static org.nd4j.linalg.indexing.NDArrayIndex.interval;
 
 @Getter
 @Setter
-public class MLP {
+public class ClassificationMLP {
     private List<HiddenLayer> layerList = new ArrayList<>();
     private INDArray input;
     private INDArray output;
@@ -29,9 +29,11 @@ public class MLP {
     private Double averageError = 0.0;
     private Double mean = 0.0;
     private Double std = 1.0;
+    private Double accuracy = 0.0;
     
     
-    public MLP(String input, LossFunction lossFunction, Double learningRate, Double momentumRate) {
+    public ClassificationMLP(String input, LossFunction lossFunction, Double learningRate,
+                             Double momentumRate) {
         
         this.learningRate = learningRate;
         this.momentumRate = momentumRate;
@@ -80,24 +82,23 @@ public class MLP {
             desiredOutput = desiredOutput.sub(mean).div(std);
 
 //            System.out.println(input);
-//            System.out.println(this.getOutput());
 //            System.out.println(desiredOutput);
             
             this.forward(input);
-            this.backward(lossFunction.errorDiff(this.getOutput() , desiredOutput));
+            this.backward(lossFunction.errorDiff(this.getOutput(), desiredOutput));
+
+//            System.out.println(this.getOutput());
             
-//            System.out.println(lossFunction.error(this.getOutput() , desiredOutput).sum().getDouble());
-            
-            sumErrorOutput += lossFunction.error(this.getOutput() , desiredOutput).sum().getDouble();
-            sumError += lossFunction.error(this.getOutputDenormalized() , desiredOutput.mul(std).add(mean)).sum().getDouble();
+            sumErrorOutput += lossFunction.error(this.getOutput(), desiredOutput).sum().getDouble();
+            sumError +=
+                lossFunction.error(this.getOutputDenormalized(), desiredOutput.mul(std).add(mean))
+                    .sum().getDouble();
             trainIteration++;
             dataInd++;
             
-//            System.out.println(sumErrorOutput);
-            
             this.averageError = sumErrorOutput / trainIteration;
-//            System.out.println(trainIteration);
             
+            this.averageError = sumError / trainIteration;
         } while (this.averageError >= 0.00001 && trainIteration < 1000);
         
         System.out.println("Train Average Error: " + this.averageError);
@@ -105,22 +106,46 @@ public class MLP {
     }
     
     public void test(List<DataSet> testDatas) {
+        
+        Double TP = 0.0;
+        Double TN = 0.0;
+        Double FP = 0.0;
+        Double FN = 0.0;
+        
         Double sumError = 0.0;
-        Double MAE = 0.0;
+
         for (DataSet testData : testDatas) {
             INDArray input = Nd4j.toFlattened(testData.getFeatures());
             INDArray desiredOutput = Nd4j.toFlattened(testData.getLabels());
             
             input = input.sub(mean).div(std);
             this.forward(input);
-
-//            System.out.println("Input: " + input);
-//            System.out.println("Desired Output: " + desiredOutput);
-//            System.out.println("Output: " + this.getOutputDenormalized());
             
-            sumError += lossFunction.error(this.getOutputDenormalized(), desiredOutput).sum().getDouble();
+            Double output = this.getOutput().getDouble() > 0.5 ? 1.0 : 0.0;
+            Double actual = desiredOutput.getDouble();
+            if (actual == 1 && output == 1) {
+                TP++;
+            } else if (actual == 1 && output == 0) {
+                FN++;
+            } else if (actual == 0 && output == 1) {
+                FP++;
+            } else {
+                TN++;
+            }
+            
+            sumError +=
+                lossFunction.error(this.getOutputDenormalized(), desiredOutput).sum().getDouble();
         }
+        Double accuracy = (TP + TN) / (TP + TN + FP + FN);
         System.out.println("Test Average " + lossFunction + ": " + (sumError / testDatas.size()));
+        System.out.println("Confusion Matrix");
+        System.out.println("\t\t\t\t 1 \t\t 0");
+        System.out.println("\t\t 1" + "\t\t" + TP + " \t\t" + FP);
+        System.out.println("\t\t 0" + "\t\t" + FN + " \t\t" + TN);
+        System.out.println("Accuracy: " + accuracy);
+        
+        this.accuracy = accuracy;
+        
     }
     
     public void forward(INDArray input) {
@@ -175,7 +200,7 @@ public class MLP {
             }
             layer.updateBias(this.learningRate);
 //            System.out.println(layer);
-            
+        
         }
     }
     

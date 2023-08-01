@@ -10,4 +10,9 @@ public class SigmoidFunction implements ActivationFunction {
     public Double activateDiff(Double b) {
         return activate(b) * (1.0 - activate(b));
     }
+    
+    @Override
+    public String toString() {
+        return "Sigmoid Function";
+    }
 }

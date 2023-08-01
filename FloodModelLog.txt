@@ -1,0 +1,464 @@
+8-8T-2T-1T Learning Rate: 0.003, Momentum Rate: 0.003
+Average MSE Error: 0.23271111538805397
+8-8T-2T-1T Learning Rate: 0.003, Momentum Rate: 0.01
+Average MSE Error: 0.2303992456149242
+8-8T-2T-1T Learning Rate: 0.003, Momentum Rate: 0.03
+Average MSE Error: 0.22645018259343427
+8-8T-2T-1T Learning Rate: 0.003, Momentum Rate: 0.1
+Average MSE Error: 0.22386812524159305
+8-8T-2T-1T Learning Rate: 0.003, Momentum Rate: 0.3
+Average MSE Error: 0.20896015575531482
+8-8T-2T-1T Learning Rate: 0.003, Momentum Rate: 1.0
+Average MSE Error: 0.48992465249961326
+8-8T-2T-1T Learning Rate: 0.01, Momentum Rate: 0.003
+Average MSE Error: 0.22384628326267472
+8-8T-2T-1T Learning Rate: 0.01, Momentum Rate: 0.01
+Average MSE Error: 0.22288693079579908
+8-8T-2T-1T Learning Rate: 0.01, Momentum Rate: 0.03
+Average MSE Error: 0.22009966160184122
+8-8T-2T-1T Learning Rate: 0.01, Momentum Rate: 0.1
+Average MSE Error: 0.21837117270249493
+8-8T-2T-1T Learning Rate: 0.01, Momentum Rate: 0.3
+Average MSE Error: 0.20634581851173897
+8-8T-2T-1T Learning Rate: 0.01, Momentum Rate: 1.0
+Average MSE Error: 0.4903929773782612
+8-8T-2T-1T Learning Rate: 0.03, Momentum Rate: 0.003
+Average MSE Error: 0.20117538929244727
+8-8T-2T-1T Learning Rate: 0.03, Momentum Rate: 0.01
+Average MSE Error: 0.20854264821187035
+8-8T-2T-1T Learning Rate: 0.03, Momentum Rate: 0.03
+Average MSE Error: 0.2176390450549214
+8-8T-2T-1T Learning Rate: 0.03, Momentum Rate: 0.1
+Average MSE Error: 0.20429559794359453
+8-8T-2T-1T Learning Rate: 0.03, Momentum Rate: 0.3
+Average MSE Error: 0.1851440508685887
+8-8T-2T-1T Learning Rate: 0.03, Momentum Rate: 1.0
+Average MSE Error: 0.6373956351737917
+8-8T-2T-1T Learning Rate: 0.1, Momentum Rate: 0.003
+Average MSE Error: 0.18274897222381858
+8-8T-2T-1T Learning Rate: 0.1, Momentum Rate: 0.01
+Average MSE Error: 0.1697353366290707
+8-8T-2T-1T Learning Rate: 0.1, Momentum Rate: 0.03
+Average MSE Error: 0.16663022818020398
+8-8T-2T-1T Learning Rate: 0.1, Momentum Rate: 0.1
+Average MSE Error: 0.15385817120248552
+8-8T-2T-1T Learning Rate: 0.1, Momentum Rate: 0.3
+Average MSE Error: 0.136851176352975
+8-8T-2T-1T Learning Rate: 0.1, Momentum Rate: 1.0
+Average MSE Error: 0.8204119295571923
+8-8T-2T-1T Learning Rate: 0.3, Momentum Rate: 0.003
+Average MSE Error: 0.2027115807576631
+8-8T-2T-1T Learning Rate: 0.3, Momentum Rate: 0.01
+Average MSE Error: 0.20494529911503706
+8-8T-2T-1T Learning Rate: 0.3, Momentum Rate: 0.03
+Average MSE Error: 0.19329310681438258
+8-8T-2T-1T Learning Rate: 0.3, Momentum Rate: 0.1
+Average MSE Error: 0.19287732823756523
+8-8T-2T-1T Learning Rate: 0.3, Momentum Rate: 0.3
+Average MSE Error: 0.15893560820190816
+8-8T-2T-1T Learning Rate: 0.3, Momentum Rate: 1.0
+Average MSE Error: 1.1482913392381486
+8-8T-2T-1T Learning Rate: 1.0, Momentum Rate: 0.003
+Average MSE Error: NaN
+8-8T-2T-1T Learning Rate: 1.0, Momentum Rate: 0.01
+Average MSE Error: 1.003628831366202
+8-8T-2T-1T Learning Rate: 1.0, Momentum Rate: 0.03
+Average MSE Error: 0.6360990986909927
+8-8T-2T-1T Learning Rate: 1.0, Momentum Rate: 0.1
+Average MSE Error: 1.012422806977397
+8-8T-2T-1T Learning Rate: 1.0, Momentum Rate: 0.3
+Average MSE Error: 1.0183862975147346
+8-8T-2T-1T Learning Rate: 1.0, Momentum Rate: 1.0
+Average MSE Error: NaN
+8-8T-6T-2T-1T Learning Rate: 0.003, Momentum Rate: 0.003
+Average MSE Error: 0.23649924247612658
+8-8T-6T-2T-1T Learning Rate: 0.003, Momentum Rate: 0.01
+Average MSE Error: 0.23981159232399357
+8-8T-6T-2T-1T Learning Rate: 0.003, Momentum Rate: 0.03
+Average MSE Error: 0.24707737718731
+8-8T-6T-2T-1T Learning Rate: 0.003, Momentum Rate: 0.1
+Average MSE Error: 0.2518732802253126
+8-8T-6T-2T-1T Learning Rate: 0.003, Momentum Rate: 0.3
+Average MSE Error: 0.23341150576219416
+8-8T-6T-2T-1T Learning Rate: 0.003, Momentum Rate: 1.0
+Average MSE Error: 0.47455839358742014
+8-8T-6T-2T-1T Learning Rate: 0.01, Momentum Rate: 0.003
+Average MSE Error: 0.23595378635521613
+8-8T-6T-2T-1T Learning Rate: 0.01, Momentum Rate: 0.01
+Average MSE Error: 0.23357865485426427
+8-8T-6T-2T-1T Learning Rate: 0.01, Momentum Rate: 0.03
+Average MSE Error: 0.23514593489714133
+8-8T-6T-2T-1T Learning Rate: 0.01, Momentum Rate: 0.1
+Average MSE Error: 0.23432245350233413
+8-8T-6T-2T-1T Learning Rate: 0.01, Momentum Rate: 0.3
+Average MSE Error: 0.2208662895244793
+8-8T-6T-2T-1T Learning Rate: 0.01, Momentum Rate: 1.0
+Average MSE Error: 0.48213883581413475
+8-8T-6T-2T-1T Learning Rate: 0.03, Momentum Rate: 0.003
+Average MSE Error: 0.23129373768990735
+8-8T-6T-2T-1T Learning Rate: 0.03, Momentum Rate: 0.01
+Average MSE Error: 0.2312806017980776
+8-8T-6T-2T-1T Learning Rate: 0.03, Momentum Rate: 0.03
+Average MSE Error: 0.23314872192680552
+8-8T-6T-2T-1T Learning Rate: 0.03, Momentum Rate: 0.1
+Average MSE Error: 0.22931624611606355
+8-8T-6T-2T-1T Learning Rate: 0.03, Momentum Rate: 0.3
+Average MSE Error: 0.21470790612928353
+8-8T-6T-2T-1T Learning Rate: 0.03, Momentum Rate: 1.0
+Average MSE Error: 0.616366532868315
+8-8T-6T-2T-1T Learning Rate: 0.1, Momentum Rate: 0.003
+Average MSE Error: 0.2295257370975353
+8-8T-6T-2T-1T Learning Rate: 0.1, Momentum Rate: 0.01
+Average MSE Error: 0.23567942663901556
+8-8T-6T-2T-1T Learning Rate: 0.1, Momentum Rate: 0.03
+Average MSE Error: 0.2340700731420656
+8-8T-6T-2T-1T Learning Rate: 0.1, Momentum Rate: 0.1
+Average MSE Error: 0.21488088633586483
+8-8T-6T-2T-1T Learning Rate: 0.1, Momentum Rate: 0.3
+Average MSE Error: 0.18414346802937906
+8-8T-6T-2T-1T Learning Rate: 0.1, Momentum Rate: 1.0
+Average MSE Error: 1.0284931696708217
+8-8T-6T-2T-1T Learning Rate: 0.3, Momentum Rate: 0.003
+Average MSE Error: 0.2671812312214577
+8-8T-6T-2T-1T Learning Rate: 0.3, Momentum Rate: 0.01
+Average MSE Error: 0.280244316897992
+8-8T-6T-2T-1T Learning Rate: 0.3, Momentum Rate: 0.03
+Average MSE Error: 0.28000088177700766
+8-8T-6T-2T-1T Learning Rate: 0.3, Momentum Rate: 0.1
+Average MSE Error: 0.2526296453140427
+8-8T-6T-2T-1T Learning Rate: 0.3, Momentum Rate: 0.3
+Average MSE Error: 0.23218078972412615
+8-8T-6T-2T-1T Learning Rate: 0.3, Momentum Rate: 1.0
+Average MSE Error: 1.0905640602037263
+8-8T-6T-2T-1T Learning Rate: 1.0, Momentum Rate: 0.003
+Average MSE Error: 0.8794285066578048
+8-8T-6T-2T-1T Learning Rate: 1.0, Momentum Rate: 0.01
+Average MSE Error: 0.5909085119679781
+8-8T-6T-2T-1T Learning Rate: 1.0, Momentum Rate: 0.03
+Average MSE Error: 0.7828029281646947
+8-8T-6T-2T-1T Learning Rate: 1.0, Momentum Rate: 0.1
+Average MSE Error: 1.0098861575524116
+8-8T-6T-2T-1T Learning Rate: 1.0, Momentum Rate: 0.3
+Average MSE Error: 1.0189019473482706
+8-8T-6T-2T-1T Learning Rate: 1.0, Momentum Rate: 1.0
+Average MSE Error: 1.2108638122998638
+8-1T Learning Rate: 0.003, Momentum Rate: 0.003
+Average MSE Error: 0.19084575732940176
+8-1T Learning Rate: 0.003, Momentum Rate: 0.01
+Average MSE Error: 0.1929755668906724
+8-1T Learning Rate: 0.003, Momentum Rate: 0.03
+Average MSE Error: 0.1770566728331841
+8-1T Learning Rate: 0.003, Momentum Rate: 0.1
+Average MSE Error: 0.16201963135193181
+8-1T Learning Rate: 0.003, Momentum Rate: 0.3
+Average MSE Error: 0.16262953282626266
+8-1T Learning Rate: 0.003, Momentum Rate: 1.0
+Average MSE Error: 0.47873344447412336
+8-1T Learning Rate: 0.01, Momentum Rate: 0.003
+Average MSE Error: 0.1487057125132521
+8-1T Learning Rate: 0.01, Momentum Rate: 0.01
+Average MSE Error: 0.15421494954860582
+8-1T Learning Rate: 0.01, Momentum Rate: 0.03
+Average MSE Error: 0.14156032472106966
+8-1T Learning Rate: 0.01, Momentum Rate: 0.1
+Average MSE Error: 0.13568261502140597
+8-1T Learning Rate: 0.01, Momentum Rate: 0.3
+Average MSE Error: 0.11500699180746654
+8-1T Learning Rate: 0.01, Momentum Rate: 1.0
+Average MSE Error: 0.5720694300469396
+8-1T Learning Rate: 0.03, Momentum Rate: 0.003
+Average MSE Error: 0.0896518012559799
+8-1T Learning Rate: 0.03, Momentum Rate: 0.01
+Average MSE Error: 0.08188308257142199
+8-1T Learning Rate: 0.03, Momentum Rate: 0.03
+Average MSE Error: 0.09731017033702216
+8-1T Learning Rate: 0.03, Momentum Rate: 0.1
+Average MSE Error: 0.08799456848229883
+8-1T Learning Rate: 0.03, Momentum Rate: 0.3
+Average MSE Error: 0.07773184975823974
+8-1T Learning Rate: 0.03, Momentum Rate: 1.0
+Average MSE Error: 0.6101977712082667
+8-1T Learning Rate: 0.1, Momentum Rate: 0.003
+Average MSE Error: 0.05489845684191115
+8-1T Learning Rate: 0.1, Momentum Rate: 0.01
+Average MSE Error: 0.055185139595490984
+8-1T Learning Rate: 0.1, Momentum Rate: 0.03
+Average MSE Error: 0.06110540054103299
+8-1T Learning Rate: 0.1, Momentum Rate: 0.1
+Average MSE Error: 0.054367983575735454
+8-1T Learning Rate: 0.1, Momentum Rate: 0.3
+Average MSE Error: 0.05278643133887838
+8-1T Learning Rate: 0.1, Momentum Rate: 1.0
+Average MSE Error: NaN
+8-1T Learning Rate: 0.3, Momentum Rate: 0.003
+Average MSE Error: 0.07763863805622047
+8-1T Learning Rate: 0.3, Momentum Rate: 0.01
+Average MSE Error: 0.07027077070132044
+8-1T Learning Rate: 0.3, Momentum Rate: 0.03
+Average MSE Error: 0.07122794585508442
+8-1T Learning Rate: 0.3, Momentum Rate: 0.1
+Average MSE Error: 0.06620295618824608
+8-1T Learning Rate: 0.3, Momentum Rate: 0.3
+Average MSE Error: 0.05791487655662013
+8-1T Learning Rate: 0.3, Momentum Rate: 1.0
+Average MSE Error: NaN
+8-1T Learning Rate: 1.0, Momentum Rate: 0.003
+Average MSE Error: 0.24937658037775773
+8-1T Learning Rate: 1.0, Momentum Rate: 0.01
+Average MSE Error: 0.25709341999437985
+8-1T Learning Rate: 1.0, Momentum Rate: 0.03
+Average MSE Error: 0.26136575757831765
+8-1T Learning Rate: 1.0, Momentum Rate: 0.1
+Average MSE Error: 0.26160906776536724
+8-1T Learning Rate: 1.0, Momentum Rate: 0.3
+Average MSE Error: 0.2428876335109039
+8-1T Learning Rate: 1.0, Momentum Rate: 1.0
+Average MSE Error: NaN
+8-16T-1T Learning Rate: 0.003, Momentum Rate: 0.003
+Average MSE Error: 0.3351426060066267
+8-16T-1T Learning Rate: 0.003, Momentum Rate: 0.01
+Average MSE Error: 0.3300836179511918
+8-16T-1T Learning Rate: 0.003, Momentum Rate: 0.03
+Average MSE Error: 0.33100636596081084
+8-16T-1T Learning Rate: 0.003, Momentum Rate: 0.1
+Average MSE Error: 0.32305470195190134
+8-16T-1T Learning Rate: 0.003, Momentum Rate: 0.3
+Average MSE Error: 0.3067505385337091
+8-16T-1T Learning Rate: 0.003, Momentum Rate: 1.0
+Average MSE Error: 0.49596496577847715
+8-16T-1T Learning Rate: 0.01, Momentum Rate: 0.003
+Average MSE Error: 0.3237602550647708
+8-16T-1T Learning Rate: 0.01, Momentum Rate: 0.01
+Average MSE Error: 0.3239461966098628
+8-16T-1T Learning Rate: 0.01, Momentum Rate: 0.03
+Average MSE Error: 0.3213731298084454
+8-16T-1T Learning Rate: 0.01, Momentum Rate: 0.1
+Average MSE Error: 0.31452942276114
+8-16T-1T Learning Rate: 0.01, Momentum Rate: 0.3
+Average MSE Error: 0.29078656312050644
+8-16T-1T Learning Rate: 0.01, Momentum Rate: 1.0
+Average MSE Error: 0.4904020659387715
+8-16T-1T Learning Rate: 0.03, Momentum Rate: 0.003
+Average MSE Error: 0.300039288977744
+8-16T-1T Learning Rate: 0.03, Momentum Rate: 0.01
+Average MSE Error: 0.2882102519874159
+8-16T-1T Learning Rate: 0.03, Momentum Rate: 0.03
+Average MSE Error: 0.3036174546291283
+8-16T-1T Learning Rate: 0.03, Momentum Rate: 0.1
+Average MSE Error: 0.27777115988563233
+8-16T-1T Learning Rate: 0.03, Momentum Rate: 0.3
+Average MSE Error: 0.24160434946145837
+8-16T-1T Learning Rate: 0.03, Momentum Rate: 1.0
+Average MSE Error: 0.8273167371510105
+8-16T-1T Learning Rate: 0.1, Momentum Rate: 0.003
+Average MSE Error: 0.19771524876653843
+8-16T-1T Learning Rate: 0.1, Momentum Rate: 0.01
+Average MSE Error: 0.23078458055706252
+8-16T-1T Learning Rate: 0.1, Momentum Rate: 0.03
+Average MSE Error: 0.2070688951805882
+8-16T-1T Learning Rate: 0.1, Momentum Rate: 0.1
+Average MSE Error: 0.1810031221342418
+8-16T-1T Learning Rate: 0.1, Momentum Rate: 0.3
+Average MSE Error: 0.1391865005906327
+8-16T-1T Learning Rate: 0.1, Momentum Rate: 1.0
+Average MSE Error: 1.3607938598933371
+8-16T-1T Learning Rate: 0.3, Momentum Rate: 0.003
+Average MSE Error: 0.31865712271006696
+8-16T-1T Learning Rate: 0.3, Momentum Rate: 0.01
+Average MSE Error: 0.30792704463313214
+8-16T-1T Learning Rate: 0.3, Momentum Rate: 0.03
+Average MSE Error: 0.30485057654932624
+8-16T-1T Learning Rate: 0.3, Momentum Rate: 0.1
+Average MSE Error: 0.29704909651839007
+8-16T-1T Learning Rate: 0.3, Momentum Rate: 0.3
+Average MSE Error: 0.23480127816389826
+8-16T-1T Learning Rate: 0.3, Momentum Rate: 1.0
+Average MSE Error: NaN
+8-16T-1T Learning Rate: 1.0, Momentum Rate: 0.003
+Average MSE Error: 0.40750513876028965
+8-16T-1T Learning Rate: 1.0, Momentum Rate: 0.01
+Average MSE Error: 0.6859440302555363
+8-16T-1T Learning Rate: 1.0, Momentum Rate: 0.03
+Average MSE Error: 0.4261886486263922
+8-16T-1T Learning Rate: 1.0, Momentum Rate: 0.1
+Average MSE Error: 0.5326199118339854
+8-16T-1T Learning Rate: 1.0, Momentum Rate: 0.3
+Average MSE Error: 0.46014306905061864
+8-16T-1T Learning Rate: 1.0, Momentum Rate: 1.0
+Average MSE Error: 1.323933644403654
+8-16T-8T-2T-1T Learning Rate: 0.003, Momentum Rate: 0.003
+Average MSE Error: 0.2643802423443617
+8-16T-8T-2T-1T Learning Rate: 0.003, Momentum Rate: 0.01
+Average MSE Error: 0.25830939602883746
+8-16T-8T-2T-1T Learning Rate: 0.003, Momentum Rate: 0.03
+Average MSE Error: 0.2597497742935777
+8-16T-8T-2T-1T Learning Rate: 0.003, Momentum Rate: 0.1
+Average MSE Error: 0.2613442836149603
+8-16T-8T-2T-1T Learning Rate: 0.003, Momentum Rate: 0.3
+Average MSE Error: 0.24816944042876626
+8-16T-8T-2T-1T Learning Rate: 0.003, Momentum Rate: 1.0
+Average MSE Error: 0.4265675806097649
+8-16T-8T-2T-1T Learning Rate: 0.01, Momentum Rate: 0.003
+Average MSE Error: 0.2520932507351754
+8-16T-8T-2T-1T Learning Rate: 0.01, Momentum Rate: 0.01
+Average MSE Error: 0.254524174255645
+8-16T-8T-2T-1T Learning Rate: 0.01, Momentum Rate: 0.03
+Average MSE Error: 0.25431783724288476
+8-16T-8T-2T-1T Learning Rate: 0.01, Momentum Rate: 0.1
+Average MSE Error: 0.2500163203124382
+8-16T-8T-2T-1T Learning Rate: 0.01, Momentum Rate: 0.3
+Average MSE Error: 0.24486916214402382
+8-16T-8T-2T-1T Learning Rate: 0.01, Momentum Rate: 1.0
+Average MSE Error: 0.4775193539501643
+8-16T-8T-2T-1T Learning Rate: 0.03, Momentum Rate: 0.003
+Average MSE Error: 0.2493296647840746
+8-16T-8T-2T-1T Learning Rate: 0.03, Momentum Rate: 0.01
+Average MSE Error: 0.24873650007368156
+8-16T-8T-2T-1T Learning Rate: 0.03, Momentum Rate: 0.03
+Average MSE Error: 0.24641535680383
+8-16T-8T-2T-1T Learning Rate: 0.03, Momentum Rate: 0.1
+Average MSE Error: 0.24798097886583398
+8-16T-8T-2T-1T Learning Rate: 0.03, Momentum Rate: 0.3
+Average MSE Error: 0.2375768248606472
+8-16T-8T-2T-1T Learning Rate: 0.03, Momentum Rate: 1.0
+Average MSE Error: 0.5697811884983258
+8-16T-8T-2T-1T Learning Rate: 0.1, Momentum Rate: 0.003
+Average MSE Error: 0.25222631243650767
+8-16T-8T-2T-1T Learning Rate: 0.1, Momentum Rate: 0.01
+Average MSE Error: 0.25370072501062124
+8-16T-8T-2T-1T Learning Rate: 0.1, Momentum Rate: 0.03
+Average MSE Error: 0.25242307993142665
+8-16T-8T-2T-1T Learning Rate: 0.1, Momentum Rate: 0.1
+Average MSE Error: 0.25385279967750396
+8-16T-8T-2T-1T Learning Rate: 0.1, Momentum Rate: 0.3
+Average MSE Error: 0.24255031228697593
+8-16T-8T-2T-1T Learning Rate: 0.1, Momentum Rate: 1.0
+Average MSE Error: 0.8002928199882703
+8-16T-8T-2T-1T Learning Rate: 0.3, Momentum Rate: 0.003
+Average MSE Error: 0.2988190612589964
+8-16T-8T-2T-1T Learning Rate: 0.3, Momentum Rate: 0.01
+Average MSE Error: 0.3096546843507457
+8-16T-8T-2T-1T Learning Rate: 0.3, Momentum Rate: 0.03
+Average MSE Error: 0.3545480640069879
+8-16T-8T-2T-1T Learning Rate: 0.3, Momentum Rate: 0.1
+Average MSE Error: 0.2919109742831479
+8-16T-8T-2T-1T Learning Rate: 0.3, Momentum Rate: 0.3
+Average MSE Error: 0.27271794765684115
+8-16T-8T-2T-1T Learning Rate: 0.3, Momentum Rate: 1.0
+Average MSE Error: 1.0832112318016602
+8-16T-8T-2T-1T Learning Rate: 1.0, Momentum Rate: 0.003
+Average MSE Error: NaN
+8-16T-8T-2T-1T Learning Rate: 1.0, Momentum Rate: 0.01
+Average MSE Error: 0.5518169459194743
+8-16T-8T-2T-1T Learning Rate: 1.0, Momentum Rate: 0.03
+Average MSE Error: 0.744764223641715
+8-16T-8T-2T-1T Learning Rate: 1.0, Momentum Rate: 0.1
+Average MSE Error: 0.7056601850623776
+8-16T-8T-2T-1T Learning Rate: 1.0, Momentum Rate: 0.3
+Average MSE Error: 1.031794436704485
+8-16T-8T-2T-1T Learning Rate: 1.0, Momentum Rate: 1.0
+Average MSE Error: NaN
+8-4T-8S-2T-1T Learning Rate: 0.003, Momentum Rate: 0.003
+Average MSE Error: 0.38618286315926004
+8-4T-8S-2T-1T Learning Rate: 0.003, Momentum Rate: 0.01
+Average MSE Error: 0.39262999540915083
+8-4T-8S-2T-1T Learning Rate: 0.003, Momentum Rate: 0.03
+Average MSE Error: 0.3681260488115906
+8-4T-8S-2T-1T Learning Rate: 0.003, Momentum Rate: 0.1
+Average MSE Error: 0.3574970147013309
+8-4T-8S-2T-1T Learning Rate: 0.003, Momentum Rate: 0.3
+Average MSE Error: 0.41681036444743835
+8-4T-8S-2T-1T Learning Rate: 0.003, Momentum Rate: 1.0
+Average MSE Error: 0.6294667005677431
+8-4T-8S-2T-1T Learning Rate: 0.01, Momentum Rate: 0.003
+Average MSE Error: 0.26856173622428814
+8-4T-8S-2T-1T Learning Rate: 0.01, Momentum Rate: 0.01
+Average MSE Error: 0.26618603422685205
+8-4T-8S-2T-1T Learning Rate: 0.01, Momentum Rate: 0.03
+Average MSE Error: 0.24946570971212653
+8-4T-8S-2T-1T Learning Rate: 0.01, Momentum Rate: 0.1
+Average MSE Error: 0.2578918121590349
+8-4T-8S-2T-1T Learning Rate: 0.01, Momentum Rate: 0.3
+Average MSE Error: 0.2633936903577802
+8-4T-8S-2T-1T Learning Rate: 0.01, Momentum Rate: 1.0
+Average MSE Error: 0.6200151913806351
+8-4T-8S-2T-1T Learning Rate: 0.03, Momentum Rate: 0.003
+Average MSE Error: 0.21488079917604558
+8-4T-8S-2T-1T Learning Rate: 0.03, Momentum Rate: 0.01
+Average MSE Error: 0.2063883303284763
+8-4T-8S-2T-1T Learning Rate: 0.03, Momentum Rate: 0.03
+Average MSE Error: 0.20726521038936457
+8-4T-8S-2T-1T Learning Rate: 0.03, Momentum Rate: 0.1
+Average MSE Error: 0.20927930681122664
+8-4T-8S-2T-1T Learning Rate: 0.03, Momentum Rate: 0.3
+Average MSE Error: 0.2073629125510345
+8-4T-8S-2T-1T Learning Rate: 0.03, Momentum Rate: 1.0
+Average MSE Error: 0.8692947206791096
+8-4T-8S-2T-1T Learning Rate: 0.1, Momentum Rate: 0.003
+Average MSE Error: 0.17101848211809886
+8-4T-8S-2T-1T Learning Rate: 0.1, Momentum Rate: 0.01
+Average MSE Error: 0.16845704207036322
+8-4T-8S-2T-1T Learning Rate: 0.1, Momentum Rate: 0.03
+Average MSE Error: 0.1613511396383945
+8-4T-8S-2T-1T Learning Rate: 0.1, Momentum Rate: 0.1
+Average MSE Error: 0.16479117530950804
+8-4T-8S-2T-1T Learning Rate: 0.1, Momentum Rate: 0.3
+Average MSE Error: 0.1463862291461788
+8-4T-8S-2T-1T Learning Rate: 0.1, Momentum Rate: 1.0
+Average MSE Error: 1.1070928097896011
+8-4T-8S-2T-1T Learning Rate: 0.3, Momentum Rate: 0.003
+Average MSE Error: 0.19998491489776143
+8-4T-8S-2T-1T Learning Rate: 0.3, Momentum Rate: 0.01
+Average MSE Error: 0.19528774256790618
+8-4T-8S-2T-1T Learning Rate: 0.3, Momentum Rate: 0.03
+Average MSE Error: 0.18439707901194968
+8-4T-8S-2T-1T Learning Rate: 0.3, Momentum Rate: 0.1
+Average MSE Error: 0.1781873155368406
+8-4T-8S-2T-1T Learning Rate: 0.3, Momentum Rate: 0.3
+Average MSE Error: 0.16692804680891338
+8-4T-8S-2T-1T Learning Rate: 0.3, Momentum Rate: 1.0
+Average MSE Error: 1.2356473508697836
+8-4T-8S-2T-1T Learning Rate: 1.0, Momentum Rate: 0.003
+Average MSE Error: 1.4282863765548082
+8-4T-8S-2T-1T Learning Rate: 1.0, Momentum Rate: 0.01
+Average MSE Error: 1.5150595536399594
+8-4T-8S-2T-1T Learning Rate: 1.0, Momentum Rate: 0.03
+Average MSE Error: 1.2348148361160045
+8-4T-8S-2T-1T Learning Rate: 1.0, Momentum Rate: 0.1
+Average MSE Error: 1.5134140173166266
+8-4T-8S-2T-1T Learning Rate: 1.0, Momentum Rate: 0.3
+Average MSE Error: 1.481646660177335
+8-4T-8S-2T-1T Learning Rate: 1.0, Momentum Rate: 1.0
+Average MSE Error: 1.33985701658762
+8-1T Learning Rate: 0.1, Momentum Rate: 1.0
+Average MSE Error: NaN
+8-1T Learning Rate: 0.1, Momentum Rate: 1.0
+Average MSE Error: NaN
+8-1T Learning Rate: 0.1, Momentum Rate: 1.0
+Average MSE Error: NaN
+8-1T Learning Rate: 0.1, Momentum Rate: 1.0
+Average MSE Error: NaN
+8-1T Learning Rate: 0.1, Momentum Rate: 1.0
+Average MSE Error: NaN
+8-1T Learning Rate: 0.1, Momentum Rate: 1.0
+Average MSE Error: NaN
+8-1T Learning Rate: 0.1, Momentum Rate: 1.0
+Average MSE Error: NaN
+8-1T Learning Rate: 0.1, Momentum Rate: 1.0
+Average MSE Error: NaN
+8-1T Learning Rate: 0.1, Momentum Rate: 1.0
+Average MSE Error: NaN
+8-1T Learning Rate: 0.1, Momentum Rate: 1.0
+Average MSE Error: NaN
+8-1T Learning Rate: 0.1, Momentum Rate: 1.0
+Average MSE Error: NaN
+8-1T Learning Rate: 0.1, Momentum Rate: 1.0
+Average MSE Error: NaN
+8-1T Learning Rate: 0.1, Momentum Rate: 1.0
+Average MSE Error: NaN
+8-1T Learning Rate: 0.1, Momentum Rate: 1.0
+Average MSE Error: NaN
+8-1T Learning Rate: 0.1, Momentum Rate: 1.0
+Average MSE Error: NaN
+8-1T Learning Rate: 0.1, Momentum Rate: 0.3
+Average MSE Error: 0.03911651390161733
