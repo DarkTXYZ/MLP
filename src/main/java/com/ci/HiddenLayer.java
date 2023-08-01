@@ -24,7 +24,6 @@ public class HiddenLayer {
         this.name = name;
         
         for (int i = 0; i < n; ++i) {
-//            INDArray randomWeight = Nd4j.rand(prevLayer);
             INDArray randomWeight = Nd4j.rand(prevLayer);
             INDArray zeros = Nd4j.zeros(prevLayer);
             
@@ -53,9 +52,7 @@ public class HiddenLayer {
         
         INDArray dotProduct = prevLocalGradients.mul(prevWeights);
         Double sum = dotProduct.sum().getDouble();
-//        System.out.println("Sum = " + sum);
         target.calculateLocalGradient(sum);
-        
     }
     
     public void backwardOutputLayer(INDArray errors) {
@@ -72,7 +69,6 @@ public class HiddenLayer {
             local.add(p.getLocalGradient());
         }
         this.localGradients = Util.listToINDArray(local);
-//        System.out.println(this.localGradients);
     }
     
     public INDArray getWeightsFromPerceptron(int index) {

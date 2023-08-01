@@ -1,13 +1,6 @@
 package com.ci.activation_function;
 
 public class ActivationFunctionFactory {
-    
-    //      I - Identity
-    //      R - ReLU
-    //      S - Sigmoid
-    //      T - Tanh
-    //      U - Unit Step
-    
     public static ActivationFunction generate(String type) {
         switch (type) {
             case "I" -> {

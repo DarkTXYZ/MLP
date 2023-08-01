@@ -35,30 +35,20 @@ public class CrossPatModel {
         
         String modelStructure = "2-5T-3S-4T-1S";
 
-//            Double[] lr = {0.00001, 0.0001, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1.0, 3.0, 10.0};
         Double[] lr = {0.003, 0.01, 0.03, 0.1, 0.3};
-//        Double[] lr = {0.003, 0.01};
-//            Double[] mr = {0.00001, 0.0001, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1.0, 3.0, 10.0};
         Double[] mr = {0.003, 0.01, 0.03, 0.1, 0.3};
-//        Double[] mr = {0.003, 0.01};
         
         List<Double> lrs = new ArrayList<Double>(Arrays.asList(lr));
         List<Double> mrs = new ArrayList<Double>(Arrays.asList(mr));
         List<Double> avgError = new ArrayList<>();
         List<Double> avgAccuracy = new ArrayList<>();
 
-//        [true_pos , false_pos , false_neg, true_neg]
         INDArray confusion_matrix = Nd4j.zeros(4);
         
         for (Double learningRate : lrs) {
             for (Double momentumRate : mrs) {
                 List<Double> error = new ArrayList<>();
                 List<Double> accuracy = new ArrayList<>();
-
-//                bw.write(modelStructure + " " + "Learning Rate: " + learningRate +
-//                    ", Momentum Rate: " +
-//                    momentumRate);
-//                bw.newLine();
                 
                 for (int testFold = 0; testFold < 10; ++testFold) {
                     
@@ -88,12 +78,8 @@ public class CrossPatModel {
                     error.add(model.getAverageError());
                     accuracy.add(model.getAccuracy());
                 }
-                Collections.sort(error);
                 avgError.add(error.stream().mapToDouble(f -> f).sum() / 10.0);
                 avgAccuracy.add(accuracy.stream().mapToDouble(f -> f).sum() / 10.0);
-//                bw.write("Average Error: " + error.stream().mapToDouble(f -> f).sum() / 10.0);
-//                bw.write("\nAverage Accuracy: " + accuracy.stream().mapToDouble(f -> f).sum() / 10.0);
-//                bw.newLine();
             }
         }
         

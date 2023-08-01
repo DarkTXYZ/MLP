@@ -8,12 +8,9 @@ import lombok.Setter;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.DataSet;
 import org.nd4j.linalg.factory.Nd4j;
-import org.nd4j.linalg.ops.transforms.Transforms;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.nd4j.linalg.indexing.NDArrayIndex.interval;
 
 @Getter
 @Setter
@@ -61,8 +58,6 @@ public class ClassificationMLP {
     }
     
     public void train(List<DataSet> trainDatas) {
-        int index = 0;
-        
         this.averageError = 0.0;
         int trainIteration = 0;
         int dataInd = 0;
@@ -80,15 +75,10 @@ public class ClassificationMLP {
             
             input = input.sub(mean).div(std);
             desiredOutput = desiredOutput.sub(mean).div(std);
-
-//            System.out.println(input);
-//            System.out.println(desiredOutput);
             
             this.forward(input);
             this.backward(lossFunction.errorDiff(this.getOutput(), desiredOutput));
 
-//            System.out.println(this.getOutput());
-            
             sumErrorOutput += lossFunction.error(this.getOutput(), desiredOutput).sum().getDouble();
             sumError +=
                 lossFunction.error(this.getOutputDenormalized(), desiredOutput.mul(std).add(mean))
@@ -97,8 +87,6 @@ public class ClassificationMLP {
             dataInd++;
             
             this.averageError = sumErrorOutput / trainIteration;
-            
-            this.averageError = sumError / trainIteration;
         } while (this.averageError >= 0.00001 && trainIteration < 1000);
         
         System.out.println("Train Average Error: " + this.averageError);
@@ -145,7 +133,6 @@ public class ClassificationMLP {
         System.out.println("Accuracy: " + accuracy);
         
         this.accuracy = accuracy;
-        
     }
     
     public void forward(INDArray input) {
@@ -158,9 +145,6 @@ public class ClassificationMLP {
         }
         this.output = outputLayer;
         this.outputDenormalized = outputLayer.mul(std).add(mean);
-
-//        System.out.println(output);
-//        System.out.println(outputDenormalized);
     }
     
     public void backward(INDArray errors) {
@@ -172,26 +156,20 @@ public class ClassificationMLP {
             if (i == layerList.size() - 1) {
                 layer.backwardOutputLayer(errors);
             } else {
-//                System.out.println(layer);
                 List<Perceptron> perceptrons = layer.getPerceptronList();
                 for (int j = 0; j < perceptrons.size(); ++j) {
-//                    System.out.println(prevLayer.getLocalGradients());
-//                    System.out.println(prevLayer.getWeightsFromPerceptron(j));
-                    
                     layer.backward(j, prevLayer.getLocalGradients(),
                         prevLayer.getWeightsFromPerceptron(j));
                 }
             }
             
             layer.generateLocalGradients();
-            
             prevLayer = layer;
         }
 
 //        Update Weights
         for (int i = layerList.size() - 1; i >= 0; --i) {
             HiddenLayer layer = layerList.get(i);
-            
             if (i == 0) {
                 layer.updateWeight(this.input, this.learningRate, this.momentumRate);
             } else {
@@ -199,8 +177,6 @@ public class ClassificationMLP {
                 layer.updateWeight(layerBefore.getOutputs(), this.learningRate, this.momentumRate);
             }
             layer.updateBias(this.learningRate);
-//            System.out.println(layer);
-        
         }
     }
     

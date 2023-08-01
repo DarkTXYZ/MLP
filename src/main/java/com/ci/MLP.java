@@ -79,24 +79,15 @@ public class MLP {
             input = input.sub(mean).div(std);
             desiredOutput = desiredOutput.sub(mean).div(std);
 
-//            System.out.println(input);
-//            System.out.println(this.getOutput());
-//            System.out.println(desiredOutput);
-            
             this.forward(input);
             this.backward(lossFunction.errorDiff(this.getOutput() , desiredOutput));
-            
-//            System.out.println(lossFunction.error(this.getOutput() , desiredOutput).sum().getDouble());
             
             sumErrorOutput += lossFunction.error(this.getOutput() , desiredOutput).sum().getDouble();
             sumError += lossFunction.error(this.getOutputDenormalized() , desiredOutput.mul(std).add(mean)).sum().getDouble();
             trainIteration++;
             dataInd++;
             
-//            System.out.println(sumErrorOutput);
-            
             this.averageError = sumErrorOutput / trainIteration;
-//            System.out.println(trainIteration);
             
         } while (this.averageError >= 0.00001 && trainIteration < 1000);
         
@@ -113,10 +104,6 @@ public class MLP {
             
             input = input.sub(mean).div(std);
             this.forward(input);
-
-//            System.out.println("Input: " + input);
-//            System.out.println("Desired Output: " + desiredOutput);
-//            System.out.println("Output: " + this.getOutputDenormalized());
             
             sumError += lossFunction.error(this.getOutputDenormalized(), desiredOutput).sum().getDouble();
         }
@@ -133,40 +120,31 @@ public class MLP {
         }
         this.output = outputLayer;
         this.outputDenormalized = outputLayer.mul(std).add(mean);
-
-//        System.out.println(output);
-//        System.out.println(outputDenormalized);
     }
     
     public void backward(INDArray errors) {
         HiddenLayer prevLayer = null;
 
-//        Calaulate Local Gradients
+//      Calculate Local Gradients
         for (int i = layerList.size() - 1; i >= 0; --i) {
             HiddenLayer layer = layerList.get(i);
             if (i == layerList.size() - 1) {
                 layer.backwardOutputLayer(errors);
             } else {
-//                System.out.println(layer);
                 List<Perceptron> perceptrons = layer.getPerceptronList();
                 for (int j = 0; j < perceptrons.size(); ++j) {
-//                    System.out.println(prevLayer.getLocalGradients());
-//                    System.out.println(prevLayer.getWeightsFromPerceptron(j));
-                    
                     layer.backward(j, prevLayer.getLocalGradients(),
                         prevLayer.getWeightsFromPerceptron(j));
                 }
             }
             
             layer.generateLocalGradients();
-            
             prevLayer = layer;
         }
 
-//        Update Weights
+//      Update Weights
         for (int i = layerList.size() - 1; i >= 0; --i) {
             HiddenLayer layer = layerList.get(i);
-            
             if (i == 0) {
                 layer.updateWeight(this.input, this.learningRate, this.momentumRate);
             } else {
@@ -174,8 +152,6 @@ public class MLP {
                 layer.updateWeight(layerBefore.getOutputs(), this.learningRate, this.momentumRate);
             }
             layer.updateBias(this.learningRate);
-//            System.out.println(layer);
-            
         }
     }
     

@@ -10,8 +10,6 @@ import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.DataSet;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 import org.nd4j.linalg.factory.Nd4j;
-import org.nd4j.linalg.ops.transforms.Transforms;
-import org.nd4j.shade.guava.collect.Lists;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -34,30 +32,6 @@ public class Util {
         return Nd4j.create(arr);
     }
     
-    public static List<List<String>> readCSV(String path) {
-        List<List<String>> records = new ArrayList<List<String>>();
-        try (CSVReader csvReader = new CSVReader(new FileReader(path))) {
-            String[] values = null;
-            while ((values = csvReader.readNext()) != null) {
-                records.add(Arrays.asList(values));
-            }
-            return records;
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (CsvValidationException e) {
-            throw new RuntimeException(e);
-        }
-    }
-    
-    public static <T, U> List<U> convertStringListTodoubleList(List<T> listOfString,
-                                                               Function<T, U> function) {
-        return listOfString.stream()
-            .map(function)
-            .collect(Collectors.toList());
-    }
-    
     public static int countRowCsv(String path) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(path));
         String input;
@@ -75,13 +49,13 @@ public class Util {
         int rows = Util.countRowCsv(csvPath);
         rr.initialize(new FileSplit(new File(csvPath)));
 
-        DataSetIterator iter =
+        DataSetIterator iterator =
             new RecordReaderDataSetIterator.Builder(rr, batchSize).regression(labelIndexFrom,labelIndexTo).build();
         
         List<DataSet> dataset = new ArrayList<>();
         
-        while (iter.hasNext()) {
-            DataSet batch = iter.next();
+        while (iterator.hasNext()) {
+            DataSet batch = iterator.next();
             dataset.add(batch);
         }
         Collections.shuffle(dataset);
@@ -95,7 +69,6 @@ public class Util {
         BufferedWriter bw = new BufferedWriter(fw);
         
         Double[] lr = {0.003, 0.01, 0.03, 0.1, 0.3};
-        Double[] mr = {0.003, 0.01, 0.03, 0.1, 0.3};
         List<Double> lrs = new ArrayList<Double>(Arrays.asList(lr));
         
         bw.write(modelStructure + "\n");
