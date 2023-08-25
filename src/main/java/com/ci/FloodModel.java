@@ -25,51 +25,59 @@ public class FloodModel {
         Double mean = 340.3040;
         Double std = 120.4517;
         
-        String modelStructure = "8-1T";
-        
+        List<String> modelStructure = new ArrayList<>();
+        modelStructure.add("8-1T");
+        modelStructure.add("8-8T-2T-1T");
+        modelStructure.add("8-8T-6T-2T-1T");
+        modelStructure.add("8-16T-1T");
+        modelStructure.add("8-16T-8T-2T-1T");
+
         Double[] lr = {0.003, 0.01, 0.03, 0.1, 0.3};
         Double[] mr = {0.003, 0.01, 0.03, 0.1, 0.3};
-        
         List<Double> lrs = new ArrayList<Double>(Arrays.asList(lr));
         List<Double> mrs = new ArrayList<Double>(Arrays.asList(mr));
-        List<Double> avgError = new ArrayList<>();
-        List<Double> avgAccuracy = new ArrayList<>();
-        LossFunction lossFunction = new MSE();
-        
-        for (Double learningRate : lrs) {
-            for (Double momentumRate : mrs) {
-                List<Double> error = new ArrayList<>();
-                
-                for (int testFold = 0; testFold < 10; ++testFold) {
-                    
-                    MLP model =
-                        new MLP(modelStructure, lossFunction, learningRate, momentumRate);
-                    model.setMean(mean);
-                    model.setStd(std);
-                    
-                    List<List<DataSet>> temp = new ArrayList<>();
-                    
-                    for (int trainFold = 0; trainFold < 10; ++trainFold) {
-                        if (testFold == trainFold)
-                            continue;
-                        temp.add(folds.get(trainFold));
+
+        for (String model : modelStructure) {
+            List<Double> avgError = new ArrayList<>();
+            List<Double> avgAccuracy = new ArrayList<>();
+            LossFunction lossFunction = new MSE();
+
+            for (Double learningRate : lrs) {
+                for (Double momentumRate : mrs) {
+                    List<Double> error = new ArrayList<>();
+
+                    for (int testFold = 0; testFold < 10; ++testFold) {
+
+                        MLP trainingModel =
+                            new MLP(model, lossFunction, learningRate, momentumRate);
+                        trainingModel.setMean(mean);
+                        trainingModel.setStd(std);
+
+                        List<List<DataSet>> temp = new ArrayList<>();
+
+                        for (int trainFold = 0; trainFold < 10; ++trainFold) {
+                            if (testFold == trainFold)
+                                continue;
+                            temp.add(folds.get(trainFold));
+                        }
+
+                        List<DataSet> trainData = temp.stream()
+                            .flatMap(Collection::stream)
+                            .collect(Collectors.toList());
+                        List<DataSet> testData = folds.get(testFold);
+
+                        System.out.println("Fold " + (testFold + 1));
+                        trainingModel.train(trainData);
+                        trainingModel.test(testData);
+
+                        error.add(trainingModel.getAverageError());
                     }
-                    
-                    List<DataSet> trainData = temp.stream()
-                        .flatMap(Collection::stream)
-                        .collect(Collectors.toList());
-                    List<DataSet> testData = folds.get(testFold);
-                    
-                    System.out.println("Fold " + (testFold + 1));
-                    model.train(trainData);
-                    model.test(testData);
-                    
-                    error.add(model.getAverageError());
+                    avgError.add(error.stream().mapToDouble(f -> f).sum() / 10.0);
                 }
-                avgError.add(error.stream().mapToDouble(f -> f).sum() / 10.0);
             }
+            Util.writeArray(avgError, null, "FloodModelLog2.txt", model);
+            break;
+
         }
-        Util.writeArray(avgError, null, "FloodModelLog2.txt", modelStructure);
-        
     }
 }

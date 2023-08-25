@@ -29,14 +29,14 @@ public class MLP {
     private Double averageError = 0.0;
     private Double mean = 0.0;
     private Double std = 1.0;
-    
-    
+
+
     public MLP(String input, LossFunction lossFunction, Double learningRate, Double momentumRate) {
-        
+
         this.learningRate = learningRate;
         this.momentumRate = momentumRate;
         this.lossFunction = lossFunction;
-        
+
         String[] parse = input.split("-");
         int prevLayerNode = 0;
         Integer index = 0;
@@ -54,65 +54,68 @@ public class MLP {
             this.layerList.add(layer);
             prevLayerNode = numberOfPerceptron;
             index++;
-            
+
         }
     }
-    
+
     public void train(List<DataSet> trainDatas) {
         int index = 0;
-        
+
         this.averageError = 0.0;
         int trainIteration = 0;
         int dataInd = 0;
         int dataSize = trainDatas.size();
-        Double sumErrorOutput = 0.0;
-        Double sumError = 0.0;
-        
+        double sumErrorOutput = 0.0;
+        double sumError = 0.0;
+
         do {
             if (dataInd >= dataSize)
                 dataInd = 0;
-            
+
             DataSet trainData = trainDatas.get(dataInd);
             INDArray input = Nd4j.toFlattened(trainData.getFeatures());
             INDArray desiredOutput = Nd4j.toFlattened(trainData.getLabels());
-            
+
             input = input.sub(mean).div(std);
             desiredOutput = desiredOutput.sub(mean).div(std);
 
             this.forward(input);
-            this.backward(lossFunction.errorDiff(this.getOutput() , desiredOutput));
-            
-            sumErrorOutput += lossFunction.error(this.getOutput() , desiredOutput).sum().getDouble();
-            sumError += lossFunction.error(this.getOutputDenormalized() , desiredOutput.mul(std).add(mean)).sum().getDouble();
+            this.backward(lossFunction.errorDiff(this.getOutput(), desiredOutput));
+
+            sumErrorOutput += lossFunction.error(this.getOutput(), desiredOutput).sum().getDouble();
+            sumError +=
+                lossFunction.error(this.getOutputDenormalized(), desiredOutput.mul(std).add(mean))
+                    .sum().getDouble();
             trainIteration++;
             dataInd++;
-            
+
             this.averageError = sumErrorOutput / trainIteration;
-            
+
         } while (this.averageError >= 0.00001 && trainIteration < 1000);
-        
+
         System.out.println("Train Average Error: " + this.averageError);
         System.out.println("Train Average " + lossFunction + ": " + (sumError / trainIteration));
     }
-    
+
     public void test(List<DataSet> testDatas) {
         Double sumError = 0.0;
         Double MAE = 0.0;
         for (DataSet testData : testDatas) {
             INDArray input = Nd4j.toFlattened(testData.getFeatures());
             INDArray desiredOutput = Nd4j.toFlattened(testData.getLabels());
-            
+
             input = input.sub(mean).div(std);
             this.forward(input);
-            
-            sumError += lossFunction.error(this.getOutputDenormalized(), desiredOutput).sum().getDouble();
+
+            sumError +=
+                lossFunction.error(this.getOutputDenormalized(), desiredOutput).sum().getDouble();
         }
         System.out.println("Test Average " + lossFunction + ": " + (sumError / testDatas.size()));
     }
-    
+
     public void forward(INDArray input) {
         this.input = input;
-        
+
         INDArray outputLayer = input;
         for (HiddenLayer layer : layerList) {
             layer.forward(outputLayer);
@@ -121,7 +124,7 @@ public class MLP {
         this.output = outputLayer;
         this.outputDenormalized = outputLayer.mul(std).add(mean);
     }
-    
+
     public void backward(INDArray errors) {
         HiddenLayer prevLayer = null;
 
@@ -137,7 +140,7 @@ public class MLP {
                         prevLayer.getWeightsFromPerceptron(j));
                 }
             }
-            
+
             layer.generateLocalGradients();
             prevLayer = layer;
         }
@@ -154,7 +157,7 @@ public class MLP {
             layer.updateBias(this.learningRate);
         }
     }
-    
+
     @Override
     public String toString() {
         return "MLP{" +

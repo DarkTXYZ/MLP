@@ -29,7 +29,8 @@ public class HiddenLayer {
             
             Perceptron perceptron = Perceptron.builder()
                 .activationFunction(activationFunction)
-                .bias(0.0)
+                .bias(1.0)
+                .weightBias(0.0)
                 .weights(randomWeight)
                 .prevWeights(zeros)
                 .build();

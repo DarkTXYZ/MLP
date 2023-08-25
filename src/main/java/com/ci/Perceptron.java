@@ -14,6 +14,7 @@ public class Perceptron {
     private INDArray weights;
     private INDArray prevWeights;
     private Double bias;
+    private Double weightBias;
     private Double value;
     private Double output;
     private Double localGradient;
@@ -23,12 +24,12 @@ public class Perceptron {
     public Double calculateOutput(INDArray input) {
         INDArray dotProduct = input.mul(weights);
         this.value = dotProduct.sum().getDouble();
-        this.output = this.activationFunction.activate(this.value + this.bias);
+        this.output = this.activationFunction.activate(this.value + this.bias * this.weightBias);
         return this.output;
     }
     
     public void calculateLocalGradient(Double error) {
-        this.localGradient = this.activationFunction.activateDiff(this.value + this.bias) * error;
+        this.localGradient = this.activationFunction.activateDiff(this.value + this.bias * this.weightBias) * error;
     }
     
     @Override
@@ -50,6 +51,6 @@ public class Perceptron {
     }
     
     public void updateBias(Double learningRate) {
-        this.bias = this.bias - learningRate * this.localGradient;
+        this.weightBias = this.weightBias - learningRate * this.localGradient;
     }
 }
